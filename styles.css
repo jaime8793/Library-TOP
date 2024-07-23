@@ -193,25 +193,24 @@ body {
   //margin: 0 auto;
 }
 
-
 body {
   //background-color: #000;
 }
 .ag-courses_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
+  /* -webkit-box-align: start;
+  -ms-flex-align: start; */
   align-items: flex-start;
-  -ms-flex-wrap: wrap;
+  /* -ms-flex-wrap: wrap; */
   flex-wrap: wrap;
 
-  //padding: 50px 0;
+  /* padding: 50px 0; */
 }
 .ag-courses_item {
-  -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(33.33333% - 20px);
+ // -ms-flex-preferred-size: calc(33.33333% - 30px);
+ // flex-basis: calc(33.33333% - 20px);
 
   margin: 0 15px 30px;
 
@@ -223,6 +222,7 @@ body {
   display: block;
   padding: 30px 20px;
   background-color: #121212;
+  text-decoration: none;
 
   overflow: hidden;
 
@@ -231,7 +231,7 @@ body {
 .ag-courses-item_link:hover,
 .ag-courses-item_link:hover .ag-courses-item_date {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 .ag-courses-item_link:hover .ag-courses-item_bg {
   -webkit-transform: scale(10);
@@ -246,14 +246,14 @@ body {
 
   font-weight: bold;
   font-size: 30px;
-  color: #FFF;
+  color: #fff;
 
   z-index: 2;
   position: relative;
 }
 .ag-courses-item_date-box {
   font-size: 18px;
-  color: #FFF;
+  color: #fff;
 
   z-index: 2;
   position: relative;
@@ -262,9 +262,9 @@ body {
   font-weight: bold;
   color: #f9b234;
 
-  -webkit-transition: color .5s ease;
-  -o-transition: color .5s ease;
-  transition: color .5s ease
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 .ag-courses-item_bg {
   height: 128px;
@@ -278,9 +278,9 @@ body {
 
   border-radius: 50%;
 
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
   background-color: #3ecd5e;
@@ -298,8 +298,6 @@ body {
   background-color: #4c49ea;
 }
 
-
-
 @media only screen and (max-width: 979px) {
   .ag-courses_item {
     -ms-flex-preferred-size: calc(50% - 30px);
@@ -314,7 +312,6 @@ body {
   .ag-format-container {
     width: 96%;
   }
-
 }
 @media only screen and (max-width: 639px) {
   .ag-courses_item {

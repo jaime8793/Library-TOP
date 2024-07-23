@@ -89,14 +89,28 @@ function displayLibrary() {
     titleDiv.textContent = `${kitabu.title} by ${kitabu.author}, ${kitabu.pages} pages, Read: ${kitabu.read}`;
 
     let dateBoxDiv = document.createElement("div");
-      dateBoxDiv.classList.add("ag-courses-item_date-box");
-      let dateNow = new Date();
-    dateBoxDiv.innerHTML =
-      `Date Added: <span class="ag-courses-item_date">${dateNow}</span>`;
+    dateBoxDiv.classList.add("ag-courses-item_date-box");
+    let dateNow = new Date();
+    dateBoxDiv.innerHTML = `Date Added: <span class="ag-courses-item_date">${dateNow}</span>`;
+    let bgDiv2 = document.createElement("div");
+    bgDiv2.classList.add("ag-courses-item_bg");
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("feedback-button2");
+    deleteButton.textContent = "Delete";
 
+    deleteButton.onclick = function () {
+      let index = libraryArray.indexOf(kitabu);
+      if (index > -1) {
+        libraryArray.splice(index, 1);
+      }
+      displayLibrary();
+    };
+
+    bgDiv2.appendChild(deleteButton);
     link.appendChild(bgDiv);
     link.appendChild(titleDiv);
     link.appendChild(dateBoxDiv);
+    link.appendChild(bgDiv2);
     itemDiv.appendChild(link);
     bookDiv.appendChild(itemDiv);
     libraryDiv.appendChild(bookDiv);
